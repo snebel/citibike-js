@@ -1,0 +1,62 @@
+/*
+File to make it easy to configure RequireJS
+ */
+require.config({
+    baseUrl: "js",
+    shim: {
+        underscore: {
+            exports: "_"
+        },
+        backbone: {
+            deps: [
+                "underscore",
+                "jquery"
+            ],
+            exports: "Backbone"
+        },
+        "marionette" : {
+            deps : ['jquery', 'underscore', 'backbone'],
+            exports : 'Marionette'
+        },
+        handlebars: {
+            exports: "Handlebars"
+        },
+        hbs: {
+            deps: ["underscore"]
+        },
+        request: {
+            deps: ["http"],
+            exports: 'request'
+        }
+    },
+
+    paths: {
+        underscore: "lib/underscore/underscore",
+        backbone: "lib/backbone/backbone",
+        jquery: "lib/jquery/dist/jquery",
+        requirejs: "lib/requirejs/require",
+        hbs: "lib/require-handlebars-plugin/hbs",
+        handlebars: "lib/require-handlebars-plugin/hbs/handlebars",
+        "marionette": "lib/marionette/lib/backbone.marionette",
+        StationCollection: 'citibike/collections/StationCollection',
+        CitibikeApp: 'citibike/CitibikeApp'
+    },
+
+    packages: [
+        {
+            name: "when",
+            main: "when.js",
+            location: "lib/when"
+        }
+    ],
+
+    hbs: {
+        helpers: true,
+        i18n: false,
+        templateExtension: 'hbs',
+        partialsUrl: '',
+        helperPathCallback: function(name) {
+            return '';
+        }
+    }
+});

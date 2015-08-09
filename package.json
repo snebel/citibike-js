@@ -1,0 +1,19 @@
+{
+  "name": "citibike",
+  "version": "0.1.0",
+  "description": "A Better Citibike App",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "",
+  "dependencies": {    
+    "errorhandler": "^1.4.2",
+    "express": "*",
+    "http": "0.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "npm": "*",
+    "request": "^2.60.0"
+  },
+  "devDependencies": {}
+}
