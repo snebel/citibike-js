@@ -39,7 +39,8 @@ require.config({
         handlebars: "lib/require-handlebars-plugin/hbs/handlebars",
         "marionette": "lib/marionette/lib/backbone.marionette",
         StationCollection: 'citibike/collections/StationCollection',
-        CitibikeApp: 'citibike/CitibikeApp'
+        CitibikeApp: 'citibike/CitibikeApp',
+        geolib: 'lib/geolib/src/geolib'
     },
 
     packages: [
@@ -56,7 +57,7 @@ require.config({
         templateExtension: 'hbs',
         partialsUrl: '',
         helperPathCallback: function(name) {
-            return '';
+            return ;
         }
     }
 });

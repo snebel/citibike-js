@@ -1,27 +1,25 @@
 define([
   'marionette',
   'StationCollection',
-  'citibike/views/citibikeAppView'
+  'citibike/views/CitibikeAppView'
 ], function(
   Marionette,
   StationCollection,
   CitibikeAppView
 ) {
-  return Marionette.Application.extend({
+  return Marionette.Application.extend({    
 
     initialize: function() {
       
       this.stations = new StationCollection();
-      this.stations.fetch({
-        success: function(stations, resp) {
-
-        }
-      });
+      this.stations.fetch();
     },
 
     onStart: function() {
-      var appView = new CitibikeAppView();
-      appView.render();
+      var appView = new CitibikeAppView({
+        stations: this.stations
+      });    
+      appView.render();  
     }
 
   });
