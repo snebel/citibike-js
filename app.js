@@ -1,7 +1,7 @@
 var express = require('express');
 var http = require('http');
 var logger = require('morgan');
-var errorHandler = require('errorHandler');
+var errorHandler = require('errorhandler');
 var index = require('./routes/index');
 var citibike = require('./routes/citibike');
 
