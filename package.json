@@ -2,6 +2,10 @@
   "name": "CitibikeBetter",
   "version": "0.1.0",
   "description": "A Better Citibike App",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snebel/citibike_marionette"
+  },
   "scripts": {
     "start": "node app.js",
     "postinstall": "./node_modules/bower/bin/bower install"

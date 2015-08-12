@@ -3,10 +3,10 @@ define([
   'geolib'
 ], function(  
   Backbone,
-  geolib
+  geolib  
 ) {
 
-  return Backbone.View.extend({  
+  return Backbone.View.extend({      
 
     initialize: function(options) {         
       this.stations = options.stations;
