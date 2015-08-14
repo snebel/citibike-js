@@ -40,7 +40,8 @@ require.config({
         "marionette": "lib/marionette/lib/backbone.marionette",
         StationCollection: 'citibike/collections/StationCollection',
         CitibikeApp: 'citibike/CitibikeApp',
-        geolib: 'lib/geolib/src/geolib'
+        geolib: 'lib/geolib/src/geolib',
+        leaflet: 'lib/leaflet/dist/leaflet'
     },
 
     packages: [

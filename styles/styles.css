@@ -12,3 +12,8 @@ body {
   width: 800px;
   height: 600px;
 }
+
+#leaflet-map {
+  height: 300px;
+  width: 800px;
+}

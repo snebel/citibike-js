@@ -1,6 +1,6 @@
 define([
   'backbone',
-  'geolib'
+  'geolib'  
 ], function(  
   Backbone,
   geolib  
@@ -8,7 +8,8 @@ define([
 
   return Backbone.View.extend({      
 
-    initialize: function(options) {         
+    initialize: function(options) {  
+            
       this.stations = options.stations;
       // this.listenTo(this.stations, 'sync', this.addMarkers);
       this.listenTo(this.stations, 'sync', this.addClickListener);

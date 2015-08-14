@@ -1,11 +1,13 @@
 define([
   'marionette',
-  'citibike/views/MapView',
+  'citibike/views/GoogleMapView',
+  'citibike/views/LeafletMapView',
 
   'hbs!citibike/templates/appViewTemplate'
 ], function(
   Marionette,
-  MapView,
+  GoogleMapView,
+  LeafletMapView,
 
   template
 ) {
@@ -16,7 +18,8 @@ define([
     el: '#content',
 
     regions: {
-      map: '#map'
+      googleMap: '#map',
+      leafletMap: '#leaflet-map'
     },
     
     initialize: function(options) {
@@ -25,7 +28,11 @@ define([
     },
 
     onRender: function() {
-      this.getRegion('map').show(new MapView({
+      // this.getRegion('googleMap').show(new GoogleMapView({
+      //   stations: this.stations
+      // }));
+
+      this.getRegion('leafletMap').show(new LeafletMapView({
         stations: this.stations
       }));
     }

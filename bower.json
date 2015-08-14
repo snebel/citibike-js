@@ -16,7 +16,8 @@
     "requirejs": "*",
     "handlebars": "~1.3.0",
     "require-handlebars-plugin": "~0.8.0",
-    "geolib": "~2.0.18"
+    "geolib": "~2.0.18",
+    "leaflet": "~0.7.3"
   },
   "license": "MIT",
   "private": true,
