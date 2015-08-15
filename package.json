@@ -6,23 +6,20 @@
     "type": "git",
     "url": "https://github.com/snebel/citibike_marionette"
   },
+  "main": "app.js",
   "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node app.js",
-    "test": "gulp",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "test": "./node_modules/.bin/jasmine-node spec"
   },
-  "main": "",
   "dependencies": {
     "bower": "^1.4.1",
     "errorhandler": "^1.4.2",
-    "express": "*",
-    "http": "0.0.0",
+    "express": "^4.13.3",
     "jade": "^1.11.0",
-    "jasmine": "^2.3.2",    
-    "morgan": "^1.6.1",
-    "npm": "*",
-    "request": "^2.60.0",
-    "requirejs": "^2.1.20"
+    "jasmine-node": "^1.14.5",
+    "morgan": "^1.6.1",    
+    "request": "^2.60.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0"
