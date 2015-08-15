@@ -1,10 +1,12 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 var errorHandler = require('errorhandler');
 var index = require('./routes/index');
 var citibike = require('./routes/citibike');
 
 var app = express();
+app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(errorHandler());
 app.set('views', __dirname + '/views');
@@ -20,7 +22,6 @@ var server = app.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });  
 
-module.exports = {
-  app: app,
+module.exports = {  
   server: server 
 };

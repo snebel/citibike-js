@@ -13,15 +13,16 @@
     "test": "./node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
+    "body-parser": "^1.13.3",
     "bower": "^1.4.1",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "jasmine-node": "^1.14.5",
-    "morgan": "^1.6.1",    
+    "morgan": "^1.6.1",
     "request": "^2.60.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "jasmine-node": "^1.14.5"    
   }
 }
