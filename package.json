@@ -10,7 +10,8 @@
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node app.js",
-    "test": "./node_modules/.bin/jasmine-node spec"
+    "test": "gulp test",
+    "coveralls": "istanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
@@ -22,7 +23,10 @@
     "request": "^2.60.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
     "gulp": "^3.9.0",
-    "jasmine-node": "^1.14.5"    
+    "gulp-istanbul": "^0.10.0",
+    "gulp-jasmine": "^2.0.1",
+    "jasmine-node": "^1.14.5"
   }
 }
