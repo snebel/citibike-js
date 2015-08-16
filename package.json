@@ -27,6 +27,7 @@
     "gulp": "^3.9.0",
     "gulp-istanbul": "^0.10.0",
     "gulp-jasmine": "^2.0.1",
+    "istanbul": "^0.3.17",
     "jasmine-node": "^1.14.5"
   }
 }
