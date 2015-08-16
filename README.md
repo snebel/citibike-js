@@ -5,7 +5,7 @@
 > [citibiker.herokuapp.com](http://citibiker.herokuapp.com/)
 
 # Citibiker
->A very much work-in-progress alternative CitiBike app using Node, Express, Leaflet & Marionette/Backbone
+>A work-in-progress alternative Citibike app using various js build tools and frameworks. Application built with Node, Express, Leaflet & Marionette.
 
 Notable Dependencies
 ```
