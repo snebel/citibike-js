@@ -1,9 +1,9 @@
 define([
   'marionette',
-  'citibike/views/GoogleMapView',
-  'citibike/views/LeafletMapView',
+  'views/GoogleMapView',
+  'views/LeafletMapView',
 
-  'hbs!citibike/templates/appViewTemplate'
+  'hbs!templates/appViewTemplate'
 ], function(
   Marionette,
   GoogleMapView,

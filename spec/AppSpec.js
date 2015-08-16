@@ -1,5 +1,5 @@
 var request = require("request");
-var app = require('../app');
+var app = require('../src/app');
 
 describe('App', function() {
 

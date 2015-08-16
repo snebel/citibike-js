@@ -4,7 +4,7 @@ var jasmine = require('gulp-jasmine');
 var coveralls = require('gulp-coveralls');
 
 gulp.task('test', function (cb) {    
-  gulp.src(['app.js', 'routes/*.js'])
+  gulp.src(['src/*.js', 'src/routes/*.js'])
     .pipe(istanbul()) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
     .on('finish', function() {

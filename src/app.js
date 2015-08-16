@@ -9,7 +9,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(errorHandler());
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/static/views');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname));  
 app.set('port', process.env.PORT || 3000);

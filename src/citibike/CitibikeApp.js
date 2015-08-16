@@ -1,7 +1,7 @@
 define([
   'marionette',
-  'StationCollection',
-  'citibike/views/CitibikeAppView'
+  'collections/StationCollection',
+  'views/CitibikeAppView'
 ], function(
   Marionette,
   StationCollection,

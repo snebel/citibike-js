@@ -9,7 +9,7 @@
   "main": "app.js",
   "scripts": {
     "postinstall": "bower install",
-    "start": "node app.js",
+    "start": "node src/app.js",
     "test": "gulp coveralls",
     "coveralls": "istanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },

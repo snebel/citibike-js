@@ -2,7 +2,7 @@
 File to make it easy to configure RequireJS
  */
 require.config({
-    baseUrl: "js",
+    baseUrl: "citibike",
     shim: {
         underscore: {
             exports: "_"
@@ -37,11 +37,9 @@ require.config({
         requirejs: "lib/requirejs/require",
         hbs: "lib/require-handlebars-plugin/hbs",
         handlebars: "lib/require-handlebars-plugin/hbs/handlebars",
-        "marionette": "lib/marionette/lib/backbone.marionette",
-        StationCollection: 'citibike/collections/StationCollection',
-        CitibikeApp: 'citibike/CitibikeApp',
+        marionette: "lib/marionette/lib/backbone.marionette",                
         geolib: 'lib/geolib/src/geolib',
-        leaflet: 'lib/leaflet/dist/leaflet'
+        leaflet: 'lib/leaflet/dist/leaflet',
     },
 
     packages: [
