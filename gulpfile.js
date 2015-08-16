@@ -20,6 +20,3 @@ gulp.task('coveralls', ['test'], function(cb) {
   gulp.src('./coverage/lcov.info')
     .pipe(coveralls());
 });
-
-gulp.task('stuff', ['test', 'coveralls']);
-
