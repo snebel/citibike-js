@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/snebel/citibike_marionette.svg?branch=master)](https://travis-ci.org/snebel/citibike_marionette)
 
->[citibiker.herokuapp.com](http://citibiker.herokuapp.com/)
+[![Build Status](https://travis-ci.org/snebel/citibike_marionette.svg?branch=master)](https://travis-ci.org/snebel/citibike_marionette)
+[![Coverage Status](https://coveralls.io/repos/snebel/citibike_marionette/badge.svg?branch=master&service=github)](https://coveralls.io/github/snebel/citibike_marionette?branch=master)
+
+> [citibiker.herokuapp.com](http://citibiker.herokuapp.com/)
 
 # Citibiker
 >A very much work-in-progress alternative CitiBike app using Node, Express, Leaflet & Marionette/Backbone
