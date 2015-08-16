@@ -21,10 +21,28 @@ Client:
 │ └── underscore#1.8.3
 ├── marionette#2.4.2
 │ ├── backbone#1.2.1
-│ ├── jquery#2.1.4 (latest is 3.0.0-alpha1+compat)
+│ ├── jquery#2.1.4
 │ └── underscore#1.8.3
 ├── leaflet#0.7.3 (latest is 1.0.0-beta.1)
 ├── geolib#2.0.18/n
 └── handlebars@2.0.0
 
+Dev/Test:
+├── gulp@3.9.0
+├── gulp-coveralls@0.1.4
+│ └── coveralls@2.11.4
+├── gulp-istanbul@0.10.0
+│ └── istanbul@0.3.17
+├── gulp-jasmine@2.0.1
+| └── jasmine@2.3.2
+└── jasmine-node@1.14.5
 ```
+
+###Development
+Install: `$ npm install`
+
+Start Server: `$ npm start`
+
+Test: `$ gulp test`
+
+Coverage: `$ gulp coveralls`
