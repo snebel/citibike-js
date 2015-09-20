@@ -20,7 +20,8 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "requirejs": "^2.1.20"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
@@ -29,6 +30,8 @@
     "gulp-istanbul": "^0.10.0",
     "gulp-jasmine": "^2.0.1",
     "istanbul": "^0.3.17",
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "jquery": "^2.1.4",
+    "requirejs": "^2.1.20"
   }
 }

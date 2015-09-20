@@ -1,12 +1,10 @@
 define([
-  'marionette',
-  'views/GoogleMapView',
+  'marionette',  
   'views/LeafletMapView',
 
   'hbs!templates/appViewTemplate'
 ], function(
-  Marionette,
-  GoogleMapView,
+  Marionette,  
   LeafletMapView,
 
   template
@@ -27,11 +25,7 @@ define([
       this.render();
     },
 
-    onRender: function() {
-      // this.getRegion('googleMap').show(new GoogleMapView({
-      //   stations: this.stations
-      // }));
-
+    onRender: function() {      
       this.getRegion('leafletMap').show(new LeafletMapView({
         stations: this.stations
       }));
