@@ -19,11 +19,9 @@ define([
       
       var locationCircle;
       map.on('locationfound', function(location) {
-        if (locationCircle) {
-          console.log('in if');
+        if (locationCircle) {          
           locationCircle.setLatLng(location.latlng);
-        } else {
-          console.log('in else');
+        } else {          
           locationCircle = Leaflet.circle(location.latlng, location.accuracy/2).addTo(map);  
         }        
       });

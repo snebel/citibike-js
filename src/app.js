@@ -2,8 +2,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var errorHandler = require('errorhandler');
-var index = require('./routes/index');
-var citibike = require('./routes/citibike');
+var indexRoute = require('./routes/index');
+var citibikeRoute = require('./routes/citibike');
+var statsRoute = require('./routes/stats');
 
 var app = express();
 app.use(bodyParser.json());
@@ -15,8 +16,9 @@ app.use(express.static(__dirname));
 app.set('port', process.env.PORT || 3000);
 
 // set up routes
-app.use(index);
-app.use(citibike);
+app.use(indexRoute);
+app.use(citibikeRoute);
+app.use(statsRoute);
 
 var server = app.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
