@@ -16,11 +16,27 @@ define([
       // TODO: prioritize current location, default to nyc
       var nyc = Leaflet.latLng(40.7300527, -73.9920916); 
       var map = this.map = Leaflet.map('map').setView(nyc, 14);
+      
+      var locationCircle;
       map.on('locationfound', function(location) {
-        Leaflet.circle(location.latlng, location.accuracy/2).addTo(map);
+        if (locationCircle) {
+          console.log('in if');
+          locationCircle.setLatLng(location.latlng);
+        } else {
+          console.log('in else');
+          locationCircle = Leaflet.circle(location.latlng, location.accuracy/2).addTo(map);  
+        }        
       });
 
-      this.map.locate({setView: true, maxZoom: 16});
+      map.on('locationerror', function() {
+
+      });
+
+      this.map.locate({
+        setView: true,
+        maxZoom: 16,
+        watch: true
+      });
 
       Leaflet.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
