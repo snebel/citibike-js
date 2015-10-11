@@ -11,7 +11,7 @@ gulp.task('test', function (cb) {
     .pipe(istanbul({includeUntested: true})) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
     .on('finish', function() {
-      gulp.src(['spec/**/*.js', 'src/citibike/spec/**/*.js'])
+      gulp.src(['spec/AppSpec.js'])
         .pipe(jasmine())
         .pipe(istanbul.writeReports()) // Creating the reports after tests ran        
         // .pipe(istanbul.enforceThresholds({ thresholds: { global: 70 } })) // Enforce a coverage of at least 90%                

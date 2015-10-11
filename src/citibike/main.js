@@ -1,6 +1,7 @@
-require(['require-config', 'CitibikeApp'], function(config, CitibikeApp) {  
-  // require(['CitibikeApp'], function(CitibikeApp) {   
-    var app = new CitibikeApp();
-    app.start();     
-  // });
+require(['require-config'], function() {
+    require.config(window.requireOptions);
+    require(['CitibikeApp'], function(CitibikeApp) {
+        var app = new CitibikeApp();
+        app.start();
+    });
 });
