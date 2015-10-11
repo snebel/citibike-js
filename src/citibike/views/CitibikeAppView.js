@@ -16,7 +16,6 @@ define([
     el: '#content',
 
     regions: {
-      googleMap: '#map',
       leafletMap: '#leaflet-map'
     },
     
