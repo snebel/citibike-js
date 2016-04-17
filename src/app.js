@@ -12,7 +12,8 @@ app.use(logger('dev'));
 app.use(errorHandler());
 app.set('views', __dirname + '/static/views');
 app.set('view engine', 'jade');
-app.use(express.static(__dirname));  
+console.log(__dirname);
+app.use(express.static(__dirname));
 app.set('port', process.env.PORT || 3000);
 
 // set up routes

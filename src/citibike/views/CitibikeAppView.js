@@ -1,8 +1,7 @@
 define([
-  'marionette',  
-  'views/LeafletMapView',
-
-  'hbs!templates/appViewTemplate'
+  'backbone.marionette',
+  './LeafletMapView',
+  './templates/appViewTemplate.hbs'
 ], function(
   Marionette,  
   LeafletMapView,
@@ -16,7 +15,8 @@ define([
     el: '#content',
 
     regions: {
-      leafletMap: '#leaflet-map'
+      leafletMap: '#leaflet-map',
+      map: '#map'
     },
     
     initialize: function(options) {

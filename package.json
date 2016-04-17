@@ -2,26 +2,31 @@
   "name": "CitibikeBetter",
   "version": "0.1.0",
   "description": "A Better Citibike App",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snebel/citibike_marionette"
+    "url": "https://github.com/snebel/citibike-js"
   },
   "main": "app.js",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "webpack",
     "start": "node src/app.js",
     "test": "gulp coveralls",
     "coveralls": "istanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
+    "backbone": "^1.1.2",
+    "backbone.marionette": "^2.4.1",
     "body-parser": "^1.13.3",
-    "bower": "^1.4.1",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.2.0",
     "jade": "^1.11.0",
+    "leaflet": "^0.7.7",
     "morgan": "^1.6.1",
     "request": "^2.60.0",
-    "requirejs": "^2.1.20"
+    "webpack": "^1.13.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
