@@ -1,7 +1,7 @@
 module.exports = {
-  entry: './src/citibike/main.js',
+  entry: './src/main/citibike/main.js',
   output: {
-    path: 'src',
+    path: 'src/main',
     filename: 'bundle.js'
   },
   module: {
