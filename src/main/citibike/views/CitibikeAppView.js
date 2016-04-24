@@ -21,7 +21,6 @@ define([
     
     initialize: function(options) {
       this.stations = options.stations;      
-      this.render();
     },
 
     onRender: function() {      
