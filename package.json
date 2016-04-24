@@ -11,7 +11,7 @@
   "scripts": {
     "postinstall": "webpack",
     "start": "node src/main/app.js",
-    "test": "gulp coveralls",
+    "test": "karma start src/test/karma.conf.js --single-run",
     "coveralls": "istanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "devtest": "webpack-dev-server --config webpack.test-config.js"
   },
@@ -24,6 +24,7 @@
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.2.0",
     "jade": "^1.11.0",
+    "karma-mocha": "^0.2.2",
     "leaflet": "^0.7.7",
     "morgan": "^1.6.1",
     "request": "^2.60.0",
@@ -39,8 +40,16 @@
     "istanbul": "^0.3.17",
     "jasmine-node": "^1.14.5",
     "jquery": "^2.1.4",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-html-reporter": "^0.2.7",
+    "karma-mocha": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
     "mocha-loader": "^0.7.1",
+    "phantomjs-prebuilt": "^2.1.7",
     "requirejs": "^2.1.20",
     "sinon": "git+https://github.com/sinonjs/sinon.git",
     "webpack-dev-server": "^1.14.1"
