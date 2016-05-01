@@ -13,16 +13,16 @@ module.exports = function(config) {
       'index.js': ['webpack']
     },
 
-    reporters: ['progress', 'html'],
+    reporters: ['progress'],
 
     browsers: ['PhantomJS'],
 
-    client: {
-      mocha: {
-        reporter: 'html',
-        ui: 'bdd'
-      }
-    },
+    // client: {
+    //   mocha: {
+    //     reporter: 'html',
+    //     ui: 'bdd'
+    //   }
+    // },
 
     plugins: [
       require('karma-webpack'),

@@ -12,19 +12,23 @@ define([
 
     template: template,
 
-    el: '#content',
+    el: '#content', // needed for Leaflet
 
     regions: {
-      leafletMap: '#leaflet-map',
-      map: '#map'
+      directionsForm: '#closest-bikes',
+      leafletMap: '#leaflet-map'
     },
     
     initialize: function(options) {
       this.stations = options.stations;      
     },
 
-    onRender: function() {      
-      this.getRegion('leafletMap').show(new LeafletMapView({
+    onRender: function() {
+      if (!navigator.geolocation) {
+        this.$('#geo-error').text('Geolocation is not supported by this browser');
+      }
+
+      this.showChildView('leafletMap', new LeafletMapView({
         stations: this.stations
       }));
     }
